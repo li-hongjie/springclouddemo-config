@@ -1,0 +1,23 @@
+server:
+  port: 8703
+
+eureka:
+  instance:
+    preferIpAddress: true
+    ipAddress: 127.0.0.1
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 6
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:8701/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
