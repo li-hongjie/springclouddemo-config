@@ -1,0 +1,42 @@
+server:
+  port: 8702
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+  ribbon:
+    eager-load:
+      enabled: true
+  routes:
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 50000
+  ConnectTimeout: 30000
+
+eureka:
+  instance:
+    preferIpAddress: true
+    ipAddress: 127.0.0.1
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 6
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:8701/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
+logging:
+  file: gateway.log
