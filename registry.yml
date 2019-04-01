@@ -14,3 +14,12 @@ eureka:
     enableSelfPreservation: false
   serviceUrl:
     defaultZone: http://127.0.0.1:8701/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
