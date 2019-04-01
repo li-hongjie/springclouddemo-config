@@ -9,8 +9,6 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-  routes:
-
 ribbon:
   eureka:
     enabled: true
