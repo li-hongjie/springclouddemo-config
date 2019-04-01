@@ -13,7 +13,7 @@ eureka:
     responseCacheUpdateInvervalMs: 3000
     enableSelfPreservation: false
   serviceUrl:
-    defaultZone: http://127.0.0.1:8701/eureka/
+    defaultZone: http://192.168.37.101:8701/eureka/
 
 management:
   endpoints:
