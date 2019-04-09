@@ -25,7 +25,7 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
-    ipAddress: 192.168.37.101
+    ipAddress: 192.168.37.1
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 6
     health-check-url-path: /actuator/health
