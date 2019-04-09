@@ -35,8 +35,6 @@ eureka:
       defaultZone: http://192.168.37.101:8701/eureka/
 
 management:
-  security:
-    enabled: false
   endpoints:
     web:
       exposure:
@@ -44,16 +42,3 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: SEMAPHORE
-
-feign:
-  hystrix:
-    enabled: true
-
----
