@@ -1,0 +1,59 @@
+---
+spring:
+  profiles: common
+  cloud:
+    config:
+      allowOverride: true
+      overrideNone: true
+      overrideSystemProperties: false
+  datasource:
+    url: jdbc:mysql://58.87.123.224:3306/mydatabase?useSSL=false
+    username: root
+    password: sjkj123456
+  redis:
+    url: redis://user:1q2w3e4r@127.0.0.1:6379
+    database: 0
+  rabbitmq:
+    host: 192.168.37.101
+    port: 5672
+    username: spring
+    password: spring
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+eureka:
+  instance:
+    preferIpAddress: true
+    ipAddress: 192.168.37.101
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 6
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://192.168.37.101:8701/eureka/
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+
+feign:
+  hystrix:
+    enabled: true
+
+---
