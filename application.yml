@@ -7,11 +7,12 @@ spring:
       overrideNone: true
       overrideSystemProperties: false
   datasource:
-    url: jdbc:mysql://58.87.123.224:3306/mydatabase?useSSL=false
+    url: jdbc:mysql://192.168.37.1:3306/microservice?useSSL=false
     username: root
-    password: sjkj123456
+    password: 1q2w3e4r
   redis:
-    url: redis://user:1q2w3e4r@127.0.0.1:6379
+    url: redis://192.168.37.1:6379
+    password: 1q2w3e4r
     database: 0
   rabbitmq:
     host: 192.168.37.101
