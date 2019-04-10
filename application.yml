@@ -7,6 +7,7 @@ spring:
       overrideNone: true
       overrideSystemProperties: false
   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://192.168.37.1:3306/microservice?useSSL=false
     username: root
     password: 1q2w3e4r
