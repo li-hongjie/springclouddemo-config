@@ -1,0 +1,6 @@
+server:
+  port: 8721
+
+spring:
+  profiles:
+    include: common
