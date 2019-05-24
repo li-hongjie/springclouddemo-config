@@ -3,4 +3,4 @@ server:
 
 spring:
   profiles:
-    include: common, oauth-client
+    include: common,oauth-client
