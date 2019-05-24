@@ -45,3 +45,19 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+---
+spring:
+  profiles: oauth-client
+security:
+  oauth2:
+    client:
+      access-token-uri: http://192.168.200.58/gateway/uaa/oauth/token
+      client-id: server
+      client-secret: server
+      grant-type: client_credentials
+      scope: standard
+    resource:
+      id: ${spring.application.name}
+      jwt:
+        key-value: 123
