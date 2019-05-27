@@ -4,7 +4,7 @@ server:
 eureka:
   instance:
     preferIpAddress: true
-    ipAddress: 192.168.37.1
+    ipAddress: 192.168.37.101
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 6
     health-check-url-path: /actuator/health
@@ -21,6 +21,14 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-      
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
 logging:
   file: gateway.log
